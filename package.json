@@ -1,0 +1,26 @@
+{
+  "name": "star-wars-challenge",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brunovgois/star-wars-challenge.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/brunovgois/star-wars-challenge/issues"
+  },
+  "homepage": "https://github.com/brunovgois/star-wars-challenge#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "parse": "^2.15.0"
+  },
+  "devDependecies": {
+    "nodemon": "^2.0.4"
+  }
+}
