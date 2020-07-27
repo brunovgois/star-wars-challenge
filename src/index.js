@@ -1,5 +1,4 @@
 const Parse = require("parse/node");
-const express = require("express");
 
 Parse.initialize(
   "Jl21MbJjOzHoq3eNjK0dY1cuRyQnOeu1GNIGQpY3",
@@ -8,23 +7,19 @@ Parse.initialize(
 
 Parse.serverURL = "https://parseapi.back4app.com/";
 
-const app = express();
-app.use(express.json());
-
-app.get("/", async (req, res) => {
+async function firstQuestion() {
   const Film = Parse.Object.extend("Film");
-  const firstLaunchedMovie = new Parse.Query(Film);
+  const firstLaunchedMovieQuery = new Parse.Query(Film);
 
-  firstLaunchedMovie.ascending("releaseDate")
+  firstLaunchedMovieQuery.ascending("releaseDate");
 
   try {
-    const result = await firstLaunchedMovie.first();    
-    console.log(result.get("title"))
-    res.json()
+    const result = await firstLaunchedMovieQuery.first();
 
-  } catch(e) {
+    console.log(result.get("title"));
+  } catch (e) {
     console.log(e);
   }
-});
+}
 
-module.exports = app;
+firstQuestion();
