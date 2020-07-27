@@ -1,5 +1,7 @@
 const Parse = require("parse/node");
-const firstQuestion = require("./questions/firstQuestion")
+const firstQuestion = require("./questions/firstQuestion");
+const secondQuestion = require("./questions/secondQuestion")
+
 
 Parse.initialize(
   "Jl21MbJjOzHoq3eNjK0dY1cuRyQnOeu1GNIGQpY3",
@@ -8,5 +10,5 @@ Parse.initialize(
 
 Parse.serverURL = "https://parseapi.back4app.com/";
 
-
 new firstQuestion().answer(Parse);
+new secondQuestion().answer(Parse);
