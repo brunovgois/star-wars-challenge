@@ -1,6 +1,7 @@
-module.exports = class secondQuestion {
+module.exports = class SecondQuestion {
   constructor() {}
 
+  //Which species have the shortest lifespan in average?
   async answer(Parse) {
     const Specie = Parse.Object.extend("Specie");
     const shortestLifeSpanQuery = new Parse.Query(Specie);

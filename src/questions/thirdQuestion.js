@@ -1,4 +1,4 @@
-module.exports = class thirdQuestion {
+module.exports = class ThirdQuestion {
   constructor() {}
 
   //How many males and females characters exists
