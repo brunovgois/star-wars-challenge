@@ -1,7 +1,8 @@
 const Parse = require("parse/node");
 const firstQuestion = require("./questions/FirstQuestion");
-const secondQuestion = require("./questions/SecondQuestion")
-const thirdQUestion = require("./questions/ThirdQuestion")
+const secondQuestion = require("./questions/SecondQuestion");
+const thirdQuestion = require("./questions/ThirdQuestion");
+const fourthQuestion= require("./questions/FourthQuestion");
 
 Parse.initialize(
   "Jl21MbJjOzHoq3eNjK0dY1cuRyQnOeu1GNIGQpY3",
@@ -12,4 +13,5 @@ Parse.serverURL = "https://parseapi.back4app.com/";
 
 new firstQuestion().answer(Parse);
 new secondQuestion().answer(Parse);
-new thirdQUestion().answer(Parse)
+new thirdQuestion().answer(Parse);
+new fourthQuestion().answer(Parse);
