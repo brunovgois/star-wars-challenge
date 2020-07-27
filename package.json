@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon src/server"
+    "dev": "nodemon src/index"
   },
   "repository": {
     "type": "git",
@@ -17,10 +17,11 @@
   },
   "homepage": "https://github.com/brunovgois/star-wars-challenge#readme",
   "dependencies": {
-    "express": "^4.17.1",
+    "fast-csv": "^4.3.1",
     "parse": "^2.15.0"
   },
-  "devDependecies": {
+  "devDependencies": {
+    "jest": "^26.1.0",
     "nodemon": "^2.0.4"
   }
 }
