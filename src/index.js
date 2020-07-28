@@ -4,6 +4,7 @@ const secondQuestion = require("./questions/SecondQuestion");
 const thirdQuestion = require("./questions/ThirdQuestion");
 const fourthQuestion = require("./questions/FourthQuestion");
 const fifthQuestion = require("./questions/FifthQuestion");
+const sixthQuestion = require("./questions/SixthQuestion");
 
 Parse.initialize(
   "Jl21MbJjOzHoq3eNjK0dY1cuRyQnOeu1GNIGQpY3",
@@ -17,3 +18,4 @@ new secondQuestion().answer(Parse);
 new thirdQuestion().answer(Parse);
 new fourthQuestion().answer(Parse);
 new fifthQuestion().answer(Parse);
+new sixthQuestion().answer(Parse);
