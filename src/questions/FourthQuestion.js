@@ -1,6 +1,7 @@
 module.exports = class FourthQuestion {
   constructor() {}
 
+  //What is the average height of the characters?
   async answer(Parse) {
     const Character = Parse.Object.extend("Character");
     const averageHeightQuery = new Parse.Query(Character);
