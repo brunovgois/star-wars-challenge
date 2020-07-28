@@ -10,4 +10,19 @@
 - [ ] Generate Csv with the answers
 - [ ] Create tests using https://jestjs.io/
   - [ ] use https://github.com/Hustle/parse-mockdb
-- [ ] Cadastro de produtos
+
+## How to Run
+- Instal [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/), if you don't have it already
+- (optional, npm works just as fine) Install [Yarn](https://yarnpkg.com/)
+```bash
+# Clone this repository
+$ git clone <https://github.com/brunovgois/star-wars-challenge>
+
+# go to the project folder
+$ cd star-wars-challenge
+
+# Install dependencies
+$ yarn install
+
+# Execute the application in development mode
+$ yarn dev
