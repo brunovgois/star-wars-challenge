@@ -17,7 +17,7 @@ module.exports = class ThirdQuestion {
         else if (object.get("gender") === "female") females++;
       }
 
-      return `${males} ${females}`;
+      return `M:${males}, F:${females}`;
     } catch (e) {
       console.log(e);
     }
