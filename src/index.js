@@ -41,7 +41,14 @@ async function getAnswers() {
   ] = result;
 
   console.log(result);
-  // writeCsv(firstAnswer, secondAnswer)
+  writeCsv(
+    firstAnswer,
+    secondAnswer,
+    thirdAnswer,
+    fourthAnswer,
+    fifthAnswer,
+    sixthAnswer
+  );
 })();
 
 function writeCsv(
@@ -52,23 +59,22 @@ function writeCsv(
   fifthAnswer,
   sixthAnswer
 ) {
+
   if (fs.existsSync("answers.csv")) {
     fs.unlink("answers.csv", (e) => {
-      console.log(e);
+      if(e !== null)
+        console.log(e);
     });
   }
 
-  const row = `${firstAnswer};${secondAnswer};${thirdAnswer}`;
-
   const ws = fs.createWriteStream("answers.csv");
-  csv.parse({ delimiter: ";" });
   csv
     .write(
       [
-        ["Pergunta 1;Pergunta 2;Pergunta 3;Pergunta 4;Pergunta 5;Pergunta 6"],
-        [row],
+        ["Pergunta 1", "Pergunta 2", "Pergunta 3", "Pergunta 4", "Pergunta 5", "Pergunta 6"],
+        [firstAnswer, secondAnswer, thirdAnswer, fourthAnswer, fifthAnswer, sixthAnswer]
       ],
-      { header: true }
+      { header: false, delimiter: ";" }
     )
     .pipe(ws);
 }
