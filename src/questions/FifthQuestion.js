@@ -3,6 +3,7 @@ module.exports = class FifthQuestion {
 
   // How many characters speak the language "Gungan basic"?
   async answer(Parse) {
+    const answerArray = [];
     const Character = Parse.Object.extend("Character");
     const Specie = Parse.Object.extend("Specie");
 
@@ -14,12 +15,13 @@ module.exports = class FifthQuestion {
     query.matchesQuery("species", innerQuery);
     try {
       const results = await query.find();
-  
+
       for (let i = 0; i < results.length; i++) {
-        var object = results[i];
-        console.log(object.get("name"))
+        const object = results[i];
+        answerArray.push(object.get("name"));
       }
-    } catch(e) {
+      return answerArray;
+    } catch (e) {
       console.log(e);
     }
   }

@@ -22,12 +22,12 @@ module.exports = class SixthQuestion {
       const results = await query.find();
 
       for (let i = 0; i < results.length; i++) {
-        var object = results[i];
+        const object = results[i];
         if (object.get("homeworld").id == mostPopulousPlanetId) {
           characterCount++;
         }
       }
-      console.log(characterCount);
+      return characterCount;
     } catch (e) {
       console.log(e);
     }

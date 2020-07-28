@@ -11,7 +11,8 @@ module.exports = class FirstQuestion {
 
     try {
       const result = await firstLaunchedMovieQuery.first();
-      console.log(result.get("title"));
+      return result.get("title");
+      
     } catch (e) {
       console.log(e);
     }

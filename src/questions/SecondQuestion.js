@@ -3,6 +3,7 @@ module.exports = class SecondQuestion {
 
   //Which species have the shortest lifespan in average?
   async answer(Parse) {
+    const answerArray = [];
     const Specie = Parse.Object.extend("Specie");
     const shortestLifeSpanQuery = new Parse.Query(Specie);
 
@@ -15,14 +16,15 @@ module.exports = class SecondQuestion {
       const smallerAvgLifespan = results[0].get("averageLifespan");
 
       for (let i = 0; i < results.length; i++) {
-        var object = results[i];
+        const object = results[i];
 
         if (object.get("averageLifespan") > smallerAvgLifespan) {
           break;
         } else {
-          console.log(object.get("name"));
+          answerArray.push(object.get("name"));
         }
       }
+      return answerArray;
     } catch (e) {
       console.log(e);
     }
