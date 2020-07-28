@@ -8,6 +8,7 @@ module.exports = class FourthQuestion {
     const characterHeights = []
   
     averageHeightQuery.greaterThan("height", 0);
+    averageHeightQuery.select("height")
   
     const results = await averageHeightQuery.find();
     for (let i = 0; i < results.length; i++) {

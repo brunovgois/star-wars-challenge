@@ -5,6 +5,7 @@ module.exports = class ThirdQuestion {
   async answer(Parse) {
     const Character = Parse.Object.extend("Character");
     const charactersPerGenderQuery = new Parse.Query(Character);
+    charactersPerGenderQuery.select("gender")
     let males = 0
     let females = 0
 

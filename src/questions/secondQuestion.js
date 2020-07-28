@@ -6,10 +6,11 @@ module.exports = class SecondQuestion {
     const Specie = Parse.Object.extend("Specie");
     const shortestLifeSpanQuery = new Parse.Query(Specie);
 
-    try {
-      shortestLifeSpanQuery.ascending("averageLifespan");
-      shortestLifeSpanQuery.greaterThan("averageLifespan", 0);
+    shortestLifeSpanQuery.ascending("averageLifespan");
+    shortestLifeSpanQuery.greaterThan("averageLifespan", 0);
+    shortestLifeSpanQuery.select("name");
 
+    try {
       const results = await shortestLifeSpanQuery.find();
       const smallerAvgLifespan = results[0].get("averageLifespan");
 

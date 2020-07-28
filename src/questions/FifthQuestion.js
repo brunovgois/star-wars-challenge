@@ -10,6 +10,7 @@ module.exports = class FifthQuestion {
     innerQuery.equalTo("language", "Gungan basic");
 
     const query = new Parse.Query(Character);
+    query.select("name");
     query.matchesQuery("species", innerQuery);
     try {
       const results = await query.find();
