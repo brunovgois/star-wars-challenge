@@ -7,7 +7,6 @@
 
 ### TODO
 
-- [ ] Generate Csv with the answers
 - [ ] Create tests using https://jestjs.io/
   - [ ] use https://github.com/Hustle/parse-mockdb
 
