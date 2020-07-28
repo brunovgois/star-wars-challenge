@@ -26,3 +26,5 @@ $ yarn install
 
 # Execute the application in development mode
 $ yarn dev
+
+After that, an answers.csv file will be generated on the root directory of the project
